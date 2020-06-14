@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mini Supermarket</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="2abi.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="text-center"> Bar @ kilo Supermarket</h2>
+                </div>
+                <div class="col-4">
+                    <span id="nameFirst">First Name</span> <span id="nameLast">Last Name</span>
+                </div>
+                <div class="col-2">
+                  <span id="totalCartSize">0</span> items in cart
+              </div>
+            </div>
+            <div>
+                <form>
+                    <div class="row">
+                    <div class="form-group col-6">
+                      <input type="text" class="form-control" id="first" aria-describedby="" placeholder="First Name">
+                    </div>
+                    <div class="form-group col-6">
+                        <input type="text" class="form-control" id="last" aria-describedby="" placeholder="Last Name">
+                    </div>
+                  </div>              
+                </form>
+                <form>
+                  <div class="form-group">
+                    <label for="productNameInput">Product</label>
+                    <input type="text" class="form-control" id="productNameInput" aria-describedby="productHelp" placeholder="Product name here">
+                  </div>
+                  <div class="form-group">
+                      <label for="unitPriceInput">Unit Price</label>
+                      <input type="number" class="form-control" id="unitPriceInput" aria-describedby="priceHelp">
+                    </div>              
+                  <div class="form-group">
+                    <label for="stockInput">Stock</label>
+                    <input type="number" class="form-control" id="stockInput" placeholder="how many of this item in the store" aria-describedby="quantityHelp">
+                  </div>                            
+                  <button id="register" type="button" class="btn btn-primary">Register Product</button> 
+                </form>
+                <div class="linebreak"></div>
+                <div id="message" class="alert alert-primary" role="alert">
+                    Let's build your shopping cart.. 
+                  </div>
+                <form>
+                    <div class="form-group">
+                      <label for="product">Product Name</label>
+                      <input type="text" class="form-control" id="product" aria-describedby="productHelp" placeholder="Product name here">
+                    </div>
+                    <div class="form-group">
+                      <label for="quantityInput">Quantity</label>
+                      <input type="number" class="form-control" id="quantityInput" aria-describedby="quantityHelp">
+                    </div>
+                    <div class="form-group">
+                      <label class="mr-sm-2" for="inlineFormCustomSelect">State</label>
+                      <select class="custom-select mr-sm-2" id="taxInput">
+                        <option selected>Choose State</option>
+                        <option value="6">DC</option>
+                        <option value="6.6">Delaware</option>  
+                        <option value="6">Maryland</option>
+                        <option value="6">Pennsylvania</option>
+                        <option value="8.82">New York</option>
+                        <option value="4.3">Virginia</option>
+                      </select>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="PlasticBag">
+                      <label class="custom-control-label" for="PlasticBag">Have you used plastic bag?</label>
+                      <small id="emailHelp" class="form-text text-muted">0.15cent will be added to total if you use plastic bag.</small>
+                    </div>   
+                    <div class="linebreak"></div>                         
+                    <button id="addtoCart" type="button" class="btn btn-primary">Add Item To Cart</button>  
+                    <button id="total" type="button" class="btn btn-primary">Show Total</button> 
+                    <button id="lowInventoryBtn" type="button" class="btn btn-primary">Low Inventories</button>
+                   <div class="linebreak"></div>
+                    <div id="lowInvTablePlaceHolder"></div>
+                    <div class="card"></div>
+                    </div>
+                  </form>
+            </div>
+        </div>
+        <script src="2abi.js"></script>
+    </body>
+</html>
